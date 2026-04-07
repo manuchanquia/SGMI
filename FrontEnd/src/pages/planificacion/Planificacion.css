@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+
+.body {
+    font-family: 'Albert Sans', sans-serif;
+}
+
+/* Modal Planificaciones (Atrás) */
+.modal-planif-boceto {
+    border-radius: 10px;
+    box-shadow: 8px 8px 0px rgba(0,0,0,0.1); 
+    z-index: 1050 !important;
+    transition: all 0.3s ease-in-out;
+}
+
+/* EFECTO DE PROFUNDIDAD */
+.modal-planif-boceto.modal-en-profundidad {
+    transform: scale(0.96); 
+    filter: blur(3px) brightness(0.8); 
+    pointer-events: none; 
+    user-select: none;
+}
+
+.modal-titulo-dibujo {
+    font-family: 'Anta', sans-serif;
+    font-size: 30px;
+    font-weight: lighter;
+    color: #000;
+    margin: 0;
+}
+
+.sigla-grupo-detalle {
+    color: #969696 !important;
+}
+
+.linea-negra {
+    border-top: 0.5px solid #f07e26;
+    opacity: 1;
+    margin: 10px 0;
+}
+
+.btn-dibujo-naranja {
+    background-color: transparent !important;
+    border: 2px solid #f07e26 !important;
+    padding: 5px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.btn-dibujo-naranja.active {
+    background-color: #f07e26 !important;
+}
+
+.modal-lista-scroll {
+    max-height: 350px;
+    overflow-y: auto;
+    margin-top: 15px;
+}
+
+.item-planif-dibujo {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.item-planif-dibujo label {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.item-planif-dibujo .form-check-input {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    border: 1px solid #8b8b8b;
+}
+
+.link-planificacion {
+    cursor: pointer;
+}
+
+.link-planificacion:hover {
+    color: #f07e26 !important;
+}
+
+/* Modal Confirmación (Adelante) */
+.modal-confirmacion-wrapper {
+    z-index: 1100 !important; 
+}
+
+.modal-confirmacion-wrapper .modal-content {
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2); 
+}
+
+.texto-congelado {
+    color: #cbcbcb !important;
+    font-style: italic !important;
+    text-decoration: none !important;
+    cursor: default !important;
+}
+
+.item-planif-dibujo.congelada {
+    opacity: 0.6;
+}
+
+/* Notificaciones Sileo */
+[data-sileo-title] { font-size: 14px !important; }
+[data-sileo-description] { color: #fff !important; text-align: center !important; }
+[data-sileo-viewport] { z-index: 9999 !important; }
+
+@media (max-width: 768px) {
+    .modal-planif-boceto .justify-content-between.mb-1 {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 15px;
+    }
+    .modal-planif-boceto .justify-content-between.mb-1 .d-flex.gap-2 {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .modal-planif-boceto .mb-3.animate__animated {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .modal-planif-boceto .mb-3.animate__animated > * {
+        width: 100%;
+    }
+
+    .modal-planif-boceto .justify-content-end.mt-4 {
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 10px !important;
+    }
+    .modal-planif-boceto .justify-content-end.mt-4 > * {
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    .text-center.p-3 .justify-content-center.gap-3 {
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 10px !important;
+    }
+    .text-center.p-3 .justify-content-center.gap-3 > * {
+        width: 100%;
+        margin: 0 !important;
+    }
+}

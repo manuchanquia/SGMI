@@ -1,0 +1,34 @@
+import enum
+
+class TipoPersonal(enum.Enum):
+    BECARIO = "BECARIO"
+    INVESTIGADOR = "INVESTIGADOR"
+    PROFESIONAL = "PROFESIONAL"
+    SOPORTE = "SOPORTE"
+    VISITANTE = "VISITANTE"
+
+class RolSoporte(enum.Enum):
+    TECNICO = "TECNICO"
+    APOYO = "APOYO"
+    ADMINISTRATIVO = "ADMINISTRATIVO"
+
+class RolVisitante(enum.Enum):
+    ACADEMICA = "ACADEMICA"
+    TECNICA = "TECNICA"
+
+class TipoFormacion(enum.Enum):
+    DOCTORADO = "DOCTORADO"
+    MAESTRIA = "MAESTRIA / ESPECIALIZACION"
+    BECARIO_GRADUADO = "BECARIO GRADUADO"
+    BECARIO_ALUMNO = "BECARIO ALUMNO"
+    PASANTE = "PASANTE"
+    PROYECTO_FINAL = "PROYECTO FINAL / TESIS DE POSGRADO"
+
+class DedicacionInvestigador(enum.Enum):
+    SIMPLE = "SIMPLE"
+    SEMIEXCLUSIVA = "SEMIEXCLUSIVA"
+    EXCLUSIVA = "EXCLUSIVA"
+
+class TipoDocumento(enum.Enum):
+    PASAPORTE = "PASAPORTE"
+    DNI = "DNI"

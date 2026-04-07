@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+
+html, body, #root {
+    height: 100%;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: "Albert Sans", sans-serif;
+    background-color: #f8f9fb;
+    margin: 0;
+    padding: 0%;
+    width: 100%;
+    min-height: 100vh; 
+}
+
+.imagenMas {
+    width: 13px;
+    display: block;
+}
+
+.usuarios {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+}
+
+.titulo-usuarios {
+    align-content: center;
+    font-weight: lighter;
+    font-family: "Anta", sans-serif;
+    margin-bottom: 15px;
+}
+
+/* boton agregar */
+.boton-agregar {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-agregar:hover {
+    background-color: #5a6268;
+}
+
+/* paginacion */
+.pagination .page-item {
+    margin: 0 2px;  
+}
+
+.pagination .page-link {
+    color: #6c757d;
+    border: 1px solid #dee2e6;
+    padding: 5px 10px;    
+    font-size: 0.75rem;   
+    min-width: 35px;     
+    text-align: center;
+}
+
+.pagination .page-item:not(.active) .page-link:hover {
+    background-color: #ffe8d6;
+    color: #ff752d;
+    border-color: #ff752d;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #ff752d;
+    color: white;
+    border-color: #ff752d;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #adb5bd;
+}
+
+
+/* checkbox */
+.form-check-input:checked {
+    background-color: #ff9d41 !important;
+    border-color: #ff7a00 !important;
+}
+
+.form-check-input:focus {
+    border-color: #ff7d04 !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 123, 0, 0.401) !important;
+}
+
+
+/* layout general */
+.usuarios-layout {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.usuarios-contenido {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Tabla centrada */
+.tabla-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.tabla-container {
+    width: 100%;
+    max-width: 1200px;
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch;
+}
+
+/* filtros */
+.form-control:focus, .form-select:focus {
+    border-color: #ff752d;
+    box-shadow: 0 0 0 0.25rem rgba(255, 117, 45, 0.25);
+}
+
+.filtros-container {
+    padding: 8px 25px;
+    border-radius: 14px;
+    max-width: 1200px;      
+    margin: 20px auto 0px auto;  
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    background-color: white;
+    width: 92%;
+}
+
+.filtros-container .form-control,
+.filtros-container .form-select {
+    height: 38px;
+    font-size: 13px;
+}
+
+.filtros-container .row {
+    margin: 0 !important;
+}
+
+.filtros-container [class*="col-"] {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/*formulario*/
+.lista-sugerencias {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%; 
+    background-color: white !important;
+    border: 1px solid #ced4da;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    z-index: 2000 !important;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.lista-sugerencias li {
+    padding: 8px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #f1f1f1;
+    font-size: 0.9rem;
+    color: #333;
+    background: white;
+}
+
+.lista-sugerencias li:hover {
+    background-color: #f8f9fa;
+}
+
+.contenedor-busqueda {
+    position: relative; 
+    width: 100%;
+}
+
+.titulo-seccion-opcional {
+    color: rgb(169, 169, 169);
+    font-style: italic;
+    font-size: small;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 30px;
+}
+
+/*notificaciones*/
+
+[data-sileo-title] {
+	font-size: 14px !important; 
+}
+
+[data-sileo-description] {
+    position: relative;
+    color: rgb(255, 255, 255) !important; 
+    text-align: center !important;
+    
+}
+
+[data-sileo-viewport] {
+    z-index: 9999 !important; 
+    position: fixed !important;
+}
+
+[data-sileo-toast] {
+    z-index: 10000 !important;
+}
+
+/*modal*/
+.modal-confirmacion .modal-dialog {
+    max-width: 550px; 
+    margin: 1.75rem auto;
+}
+
+/*usuario inactivo*/
+.usuario-inactivo {
+    color: #a0a0a0 !important; 
+    font-style: italic;       
+    transition: all 0.3s ease; 
+}
+
+/*ver contraseña*/
+.contenedor-password {
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.input-password {
+    background-color: #ffffff !important;
+    border-right: none !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.boton-ojo {
+    background-color: white !important; 
+    border: 1px solid #ced4da !important;
+    border-left: none !important;
+    color: #6c757d !important;
+    display: flex;
+    align-items: center;
+    padding: 0 12px !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    transition: all 0.2s ease;
+    margin-top: 0 !important;
+}
+
+.input-password:focus + .boton-ojo {
+    border-color: #ff752d !important;
+}
+
+.boton-ojo:hover {
+    color: #6c757d !important; 
+    background-color: white !important; 
+    cursor: pointer;
+}
+
+.input-password:focus,
+.input-password:focus + .boton-ojo {
+    border-color: #ff752d !important;
+    background-color: white !important;
+    outline: none;
+}
+
+.input-password:focus, 
+.boton-ojo:focus {
+    box-shadow: none !important;
+}
+
+@media (max-width: 768px) {
+    .usuarios {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    .filtros-container {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .filtros-container [class*="col-"] {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+
+    .filtros-container .d-flex.justify-content-lg-end {
+        justify-content: center !important;
+        margin-top: 10px;
+    }
+    
+    .filtros-container .boton-agregar {
+        width: 100%;
+        justify-content: center;
+    }
+}

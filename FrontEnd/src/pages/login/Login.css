@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.login {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    font-family: "Albert Sans", sans-serif;
+}
+
+.titulo-login {
+    font-family: "Anta", sans-serif;
+    color: #FF6000;
+    font-size: 65px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login p {
+    color: #FF6000;
+    margin-top: -10px;
+    font-size: 16px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.login h3 {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.login .row.container-fluid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    width: 100%;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.login-container button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    padding: 10px;
+}
+
+.boton-iniciar-sesion:hover {
+    color: #b7b7b7 !important;
+}
+
+/*contraseña*/
+.contenedor-password .form-control,
+.boton-ojo {
+    background-color: #eef4ff !important; 
+    border-color: #dee2e6 !important;
+}
+
+.input-password {
+    border-right: none !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.login-container .input-group .boton-ojo {
+    width: auto !important;
+    margin-top: 0 !important;
+    padding: 0 12px !important;
+    display: inline-flex;
+    align-items: center;
+    border-left: none !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    color: #6c757d !important;
+}
+
+.input-password:focus, 
+.boton-ojo:focus {
+    box-shadow: none !important;
+    border-color: #dee2e6 !important;
+}
+
+.boton-ojo:hover {
+    color: #333 !important;
+}
+
+.imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-iniciar-sesion {
+    width: 600px;
+}
+
+[data-sileo-title] {
+    font-size: 14px !important; 
+}
+
+[data-sileo-description] {
+    position: relative;
+    color: rgb(255, 255, 255) !important; 
+    text-align: center !important;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .login { padding-top: 20px; }
+    .titulo-login { font-size: 50px; }
+    .login-container { max-width: 90%; margin: 0 auto; }
+    .imagen { display: none !important; }
+}

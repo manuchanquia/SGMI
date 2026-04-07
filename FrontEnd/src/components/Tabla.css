@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.tabla {
+    font-family: "Albert Sans", sans-serif;
+    border: none !important;
+    border-collapse: collapse; 
+    border-spacing: 0;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(14, 14, 14, 0.1);
+    font-size: 13px;
+}
+
+.tabla th, 
+.tabla td {
+    border-bottom: 1px solid #ececec;
+    padding: 12px 20px;
+    text-align: center; 
+    white-space: nowrap;
+    font-weight: 300;
+    white-space: normal;
+}
+
+.tabla th:first-child,
+.tabla td:first-child {
+    border-left: none !important;
+}
+
+.tabla th:last-child,
+.tabla td:last-child {
+    border-right: none !important;
+}
+
+.tabla thead tr:first-child th {
+    border-top: none !important;
+    font-size: 16px;
+}
+
+.tabla tbody tr:last-child td {
+    border-bottom: none !important;
+}
+
+.tabla thead th {
+    background-color: #ff752d;
+    font-weight: 700;
+    font-size: 300;
+    color: white;
+    
+}
+
+.tabla > tbody > tr {
+    background-color: #fcfcfc !important;
+    transition: background-color 0.2s ease; ;
+}
+
+.tabla tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.tabla tbody tr:hover {
+    background-color: #f1f1f1 !important;
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .tabla thead {
+        display: none;
+    }
+
+    .tabla tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #ececec;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .tabla td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: right;
+        border-bottom: 1px solid #f1f1f1;
+        padding: 10px 15px;
+    }
+
+    .tabla td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        text-align: left;
+        padding-right: 15px;
+        color: #ff752d;
+    }
+
+    .tabla td:last-child {
+        border-bottom: none;
+    }
+}
