@@ -70,7 +70,7 @@ Para iniciar los servicios manualmente tras la instalación, utiliza los siguien
    .\.venv\Scripts\Activate.ps1
    python app.py
   
-* * El servidor estará disponible en: `http://localhost:5000`
+* *El servidor estará disponible en: `http://localhost:5000`
 
 2. **Frontend (React):**
    ```powershell
